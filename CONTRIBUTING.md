@@ -51,7 +51,7 @@
 
 ## 2. 기본 브랜치와 작업 흐름
 
-현재 `DBDP-Server`와 `DBDP-Client`의 기본 브랜치는 모두 `dev`입니다. 두 저장소의 일반 작업은 최신 `dev`에서 시작해 `dev`로 PR을 보냅니다.
+모두 기본 브랜치는 `dev`입니다. 일반 작업은 최신 `dev`에서 시작해 `dev`로 PR을 보냅니다.
 
 ```bash
 git switch dev
@@ -70,15 +70,11 @@ git push -u origin feat/9-sql-input
 
 위 파일 경로는 실제 수정한 경로로 바꿉니다. 이후 GitHub에서 `dev`를 대상으로 PR을 생성합니다.
 
-| 저장소 | 확인한 기본 브랜치 | 적용 방법 |
+| 저장소 | 기본 브랜치 | 적용 방법 |
 | --- | --- | --- |
-| DBDP-Server | `dev` | `dev`에서 분기하고 `dev`로 PR |
 | DBDP-Client | `dev` | `dev`에서 분기하고 `dev`로 PR |
-| mockup | `main` | 별도 합의 전에는 현재 기본 브랜치를 기준으로 작업 |
-| TCP-DS-datatset | `main` | 별도 합의 전에는 현재 기본 브랜치를 기준으로 작업 |
-| .github | `main` | 별도 합의 전에는 현재 기본 브랜치를 기준으로 작업 |
-| bottleneck\_agent\_test | `dbot/evaluation` | 평가용 기존 흐름 유지 |
-| ai\_agent | `main` 설정, 커밋 없음 | 첫 코드 등록 시 협업 기준 브랜치 결정 |
+| DBDP-Server | `dev` | `dev`에서 분기하고 `dev`로 PR |
+| DBDP-Agent | `dev` | `dev`에서 분기하고 `dev`로 PR |
 
 `main`과 `prod`의 배포 역할, 릴리스 방식은 확인되지 않았습니다. 이 문서에서 새 배포 흐름을 정하지 않습니다.
 
